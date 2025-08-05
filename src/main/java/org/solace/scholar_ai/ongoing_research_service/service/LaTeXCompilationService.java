@@ -157,65 +157,85 @@ public class LaTeXCompilationService {
         try {
             String html = latexContent;
 
-            // Remove document setup
-            html = html.replaceAll("\\\\documentclass(?:\\[.*?\\])?\\{.*?\\}", "");
-            html = html.replaceAll("\\\\usepackage(?:\\[.*?\\])?\\{.*?\\}", "");
+            // Remove document setup - use safer patterns
+            html = html.replaceAll("\\\\documentclass\\[.*?\\]\\{.*?\\}", "");
+            html = html.replaceAll("\\\\documentclass\\{.*?\\}", "");
+            html = html.replaceAll("\\\\usepackage\\[.*?\\]\\{.*?\\}", "");
+            html = html.replaceAll("\\\\usepackage\\{.*?\\}", "");
             html = html.replace("\\begin{document}", "");
             html = html.replace("\\end{document}", "");
 
-            // Handle sections
+            // Handle title and author first (before other processing)
             html = html.replaceAll(
-                    "\\\\section\\*?\\{([^}]+)\\}",
-                    "<h2 style='color: #2c3e50; font-size: 18px; margin: 30px 0 15px 0; font-weight: bold;'>$1</h2>");
-            html = html.replaceAll(
-                    "\\\\subsection\\*?\\{([^}]+)\\}",
-                    "<h3 style='color: #34495e; font-size: 16px; margin: 25px 0 10px 0; font-weight: bold;'>$1</h3>");
-
-            // Handle abstract
-            html = html.replaceAll(
-                    "\\\\begin\\{abstract\\}([\\s\\S]*?)\\\\end\\{abstract\\}",
-                    "<div style='background: #f8f9fa; padding: 15px; margin: 20px 0; border-left: 4px solid #007bff;'><strong>Abstract:</strong>$1</div>");
-
-            // Handle title and author
-            html = html.replaceAll(
-                    "\\\\title\\{([^}]+)\\}",
+                    "\\\\title\\{([^}]*)\\}",
                     "<h1 style='color: #2c3e50; font-size: 24px; margin: 20px 0; text-align: center;'>$1</h1>");
             html = html.replaceAll(
-                    "\\\\author\\{([^}]+)\\}",
+                    "\\\\author\\{([^}]*)\\}",
                     "<p style='text-align: center; color: #7f8c8d; margin: 10px 0 30px 0;'>$1</p>");
 
+            // Handle maketitle
+            html = html.replace("\\maketitle", "");
+
+            // Handle sections with safer patterns
+            html = html.replaceAll(
+                    "\\\\section\\*?\\{([^}]*)\\}",
+                    "<h2 style='color: #2c3e50; font-size: 18px; margin: 30px 0 15px 0; font-weight: bold;'>$1</h2>");
+            html = html.replaceAll(
+                    "\\\\subsection\\*?\\{([^}]*)\\}",
+                    "<h3 style='color: #34495e; font-size: 16px; margin: 25px 0 10px 0; font-weight: bold;'>$1</h3>");
+
+            // Handle abstract with safer pattern
+            html = html.replaceAll(
+                    "\\\\begin\\{abstract\\}(.*?)\\\\end\\{abstract\\}",
+                    "<div style='background: #f8f9fa; padding: 15px; margin: 20px 0; border-left: 4px solid #007bff;'><strong>Abstract:</strong>$1</div>");
+
+            // Handle IEEEkeywords
+            html = html.replaceAll(
+                    "\\\\begin\\{IEEEkeywords\\}(.*?)\\\\end\\{IEEEkeywords\\}",
+                    "<div style='background: #e8f4fd; padding: 10px; margin: 15px 0; border-left: 4px solid #2196f3;'><strong>Keywords:</strong>$1</div>");
+
             // Handle text formatting
-            html = html.replaceAll("\\\\textbf\\{([^}]+)\\}", "<strong>$1</strong>");
-            html = html.replaceAll("\\\\textit\\{([^}]+)\\}", "<em>$1</em>");
-            html = html.replaceAll("\\\\emph\\{([^}]+)\\}", "<em>$1</em>");
+            html = html.replaceAll("\\\\textbf\\{([^}]*)\\}", "<strong>$1</strong>");
+            html = html.replaceAll("\\\\textit\\{([^}]*)\\}", "<em>$1</em>");
+            html = html.replaceAll("\\\\emph\\{([^}]*)\\}", "<em>$1</em>");
 
             // Handle lists
             html = html.replaceAll("\\\\begin\\{itemize\\}", "<ul style='margin: 10px 0; padding-left: 20px;'>");
             html = html.replaceAll("\\\\end\\{itemize\\}", "</ul>");
             html = html.replaceAll("\\\\item\\s*", "<li style='margin: 5px 0;'>");
 
-            // Handle equations
+            // Handle equations with safer patterns
             html = html.replaceAll(
-                    "\\\\begin\\{equation\\}([\\s\\S]*?)\\\\end\\{equation\\}",
+                    "\\\\begin\\{equation\\}(.*?)\\\\end\\{equation\\}",
                     "<div style='text-align: center; margin: 20px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;'>$$1$</div>");
-            html = html.replaceAll("\\$([^$]+)\\$", "<span style='font-style: italic;'>$1</span>");
+            html = html.replaceAll("\\$([^$]*)\\$", "<span style='font-style: italic;'>$1</span>");
 
             // Handle line breaks
             html = html.replaceAll("\\\\\\\\", "<br>");
             html = html.replaceAll("\\n\\s*\\n", "</p><p>");
 
-            // Clean up
-            html = html.replaceAll("\\\\[a-zA-Z]+(?:\\[.*?\\])?(?:\\{[^}]*\\})*", "");
+            // Handle specific LaTeX commands that might cause issues
+            html = html.replaceAll("\\\\[a-zA-Z]+\\{[^}]*\\}", "");
+            html = html.replaceAll("\\\\[a-zA-Z]+", "");
             html = html.replaceAll("%[^\\n]*", "");
 
-            // Wrap in paragraphs
-            html = "<p>" + html + "</p>";
+            // Clean up extra whitespace
+            html = html.replaceAll("\\s+", " ").trim();
+
+            // Wrap in paragraphs if not already wrapped
+            if (!html.startsWith("<p>")) {
+                html = "<p>" + html + "</p>";
+            }
 
             return "<div style='padding: 30px; background: white; color: #212529; font-family: Georgia, serif; line-height: 1.6; max-width: 100%; overflow-wrap: break-word;'>"
                     + html + "</div>";
 
         } catch (Exception e) {
-            return "<div style='padding: 20px; color: red;'>Compilation error: " + e.getMessage() + "</div>";
+            return "<div style='padding: 20px; color: red; background: #ffe6e6; border: 1px solid #ff9999; border-radius: 5px;'>"
+                    + "<strong>Compilation Error:</strong><br>"
+                    + "Fallback conversion failed: " + e.getMessage()
+                    + "<br><br><strong>Note:</strong> This is a simplified preview. For full LaTeX compilation, please ensure pandoc is installed."
+                    + "</div>";
         }
     }
 

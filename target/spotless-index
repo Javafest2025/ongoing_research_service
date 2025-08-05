@@ -30,7 +30,7 @@ src\main\java\org\solace\scholar_ai\ongoing_research_service\repository\ProjectR
 src\main\java\org\solace\scholar_ai\ongoing_research_service\repository\TemplateRepository.java 2025-08-05T16:12:30.354147800Z
 src\main\java\org\solace\scholar_ai\ongoing_research_service\service\AIAssistanceService.java 2025-08-05T16:12:30.479063500Z
 src\main\java\org\solace\scholar_ai\ongoing_research_service\service\DocumentService.java 2025-08-05T16:02:00.944516100Z
-src\main\java\org\solace\scholar_ai\ongoing_research_service\service\LaTeXCompilationService.java 2025-08-05T17:20:44.029998200Z
+src\main\java\org\solace\scholar_ai\ongoing_research_service\service\LaTeXCompilationService.java 2025-08-05T17:26:15.776927700Z
 src\main\java\org\solace\scholar_ai\ongoing_research_service\service\ProjectService.java 2025-08-04T06:02:36.864853800Z
 src\main\java\org\solace\scholar_ai\ongoing_research_service\service\TemplateService.java 2025-08-05T16:12:30.775125700Z
 src\test\java\org\solace\scholar_ai\ongoing_research_service\OngoingResearchServiceApplicationTests.java 2025-08-04T06:02:36.864853800Z
