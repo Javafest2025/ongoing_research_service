@@ -1,0 +1,430 @@
+nohup: ignoring input
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------< org.solace.scholar_ai:ongoing_research_service >-----------
+[INFO] Building ongoing_research_service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.0:run (default-cli) > test-compile @ ongoing_research_service >>>
+[INFO] 
+[INFO] --- git-commit-id:9.0.1:revision (default) @ ongoing_research_service ---
+[INFO] dotGitDirectory is null, aborting execution!
+[INFO] Reading existing properties file [C:\Code\JavaFest2025\ongoing_research_service\target\classes\git.properties] (for project ongoing_research_service)...
+[INFO] Properties file [C:\Code\JavaFest2025\ongoing_research_service\target\classes\git.properties] is up-to-date (for module ongoing_research_service)...
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ongoing_research_service ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ ongoing_research_service ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ ongoing_research_service ---
+[INFO] Spotless.Java is keeping 26 files clean - 0 needs changes to be clean, 0 were already clean, 26 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ongoing_research_service ---
+[INFO] skip non existing resourceDirectory C:\Code\JavaFest2025\ongoing_research_service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ ongoing_research_service ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.5.0:run (default-cli) < test-compile @ ongoing_research_service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.0:run (default-cli) @ ongoing_research_service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-08-05T09:04:09.332+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] .s.s.o.OngoingResearchServiceApplication : Starting OngoingResearchServiceApplication using Java 21.0.8 with PID 34260 (C:\Code\JavaFest2025\ongoing_research_service\target\classes started by alami in C:\Code\JavaFest2025\ongoing_research_service)
+2025-08-05T09:04:09.334+06:00 DEBUG 34260 --- [ongoing_research_service] [  restartedMain] .s.s.o.OngoingResearchServiceApplication : Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-08-05T09:04:09.335+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] .s.s.o.OngoingResearchServiceApplication : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T09:04:09.374+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-05T09:04:09.374+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-05T09:04:10.257+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T09:04:10.327+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2025-08-05T09:04:10.843+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-08-05T09:04:10.859+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T09:04:10.859+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-08-05T09:04:10.906+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T09:04:10.907+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1533 ms
+2025-08-05T09:04:11.016+06:00 DEBUG 34260 --- [ongoing_research_service] [  restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-08-05T09:04:11.117+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T09:04:11.164+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-08-05T09:04:11.194+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T09:04:11.520+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T09:04:11.552+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T09:04:11.748+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-08-05T09:04:11.750+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T09:04:11.773+06:00  WARN 34260 --- [ongoing_research_service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T09:04:11.809+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T09:04:12.839+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists citations cascade 
+Hibernate: 
+    drop table if exists documents cascade 
+Hibernate: 
+    drop table if exists projects cascade 
+Hibernate: 
+    drop table if exists templates cascade 
+Hibernate: 
+    create table citations (
+        position_in_text integer,
+        year integer,
+        created_at timestamp(6) with time zone,
+        document_id uuid not null,
+        id uuid not null,
+        authors varchar(255),
+        citation_key varchar(255),
+        doi varchar(255),
+        paper_id varchar(255),
+        title varchar(255) not null,
+        venue varchar(255),
+        primary key (id)
+    )
+2025-08-05T09:04:12.865+06:00  WARN 34260 --- [ongoing_research_service] [  restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table citations (
+        position_in_text integer,
+        year integer,
+        created_at timestamp(6) with time zone,
+        document_id uuid not null,
+        id uuid not null,
+        authors varchar(255),
+        citation_key varchar(255),
+        doi varchar(255),
+        paper_id varchar(255),
+        title varchar(255) not null,
+        venue varchar(255),
+        primary key (id)
+    )" via JDBC [Syntax error in SQL statement "\000d\000a    create table citations (\000d\000a        position_in_text integer,\000d\000a        [*]year integer,\000d\000a        created_at timestamp(6) with time zone,\000d\000a        document_id uuid not null,\000d\000a        id uuid not null,\000d\000a        authors varchar(255),\000d\000a        citation_key varchar(255),\000d\000a        doi varchar(255),\000d\000a        paper_id varchar(255),\000d\000a        title varchar(255) not null,\000d\000a        venue varchar(255),\000d\000a        primary key (id)\000d\000a    )"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table citations (
+        position_in_text integer,
+        year integer,
+        created_at timestamp(6) with time zone,
+        document_id uuid not null,
+        id uuid not null,
+        authors varchar(255),
+        citation_key varchar(255),
+        doi varchar(255),
+        paper_id varchar(255),
+        title varchar(255) not null,
+        venue varchar(255),
+        primary key (id)
+    )" via JDBC [Syntax error in SQL statement "\000d\000a    create table citations (\000d\000a        position_in_text integer,\000d\000a        [*]year integer,\000d\000a        created_at timestamp(6) with time zone,\000d\000a        document_id uuid not null,\000d\000a        id uuid not null,\000d\000a        authors varchar(255),\000d\000a        citation_key varchar(255),\000d\000a        doi varchar(255),\000d\000a        paper_id varchar(255),\000d\000a        title varchar(255) not null,\000d\000a        venue varchar(255),\000d\000a        primary key (id)\000d\000a    )"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:430) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:346) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.7.jar:6.2.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.7.jar:6.2.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.solace.scholar_ai.ongoing_research_service.OngoingResearchServiceApplication.main(OngoingResearchServiceApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.0.jar:3.5.0]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table citations (\000d\000a        position_in_text integer,\000d\000a        [*]year integer,\000d\000a        created_at timestamp(6) with time zone,\000d\000a        document_id uuid not null,\000d\000a        id uuid not null,\000d\000a        authors varchar(255),\000d\000a        citation_key varchar(255),\000d\000a        doi varchar(255),\000d\000a        paper_id varchar(255),\000d\000a        title varchar(255) not null,\000d\000a        venue varchar(255),\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table citations (
+        position_in_text integer,
+        year integer,
+        created_at timestamp(6) with time zone,
+        document_id uuid not null,
+        id uuid not null,
+        authors varchar(255),
+        citation_key varchar(255),
+        doi varchar(255),
+        paper_id varchar(255),
+        title varchar(255) not null,
+        venue varchar(255),
+        primary key (id)
+    ) [42001-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5527) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8871) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8819) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreate(Parser.java:6398) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.0.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	... 42 common frames omitted
+
+Hibernate: 
+    create table documents (
+        created_at timestamp(6) with time zone,
+        updated_at timestamp(6) with time zone,
+        id uuid not null,
+        project_id uuid not null,
+        content TEXT,
+        file_path varchar(255),
+        title varchar(255) not null,
+        document_type enum ('LATEX','MARKDOWN','PLAIN_TEXT','TEMPLATE') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table projects (
+        created_at timestamp(6) with time zone,
+        updated_at timestamp(6) with time zone,
+        id uuid not null,
+        user_id uuid not null,
+        description varchar(255),
+        research_domain varchar(255),
+        title varchar(255) not null,
+        status enum ('ARCHIVED','COMPLETED','DRAFT','IN_PROGRESS','REVIEW') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table templates (
+        is_public boolean,
+        created_at timestamp(6) with time zone,
+        updated_at timestamp(6) with time zone,
+        document_id uuid,
+        id uuid not null,
+        content TEXT,
+        description varchar(255),
+        name varchar(255) not null,
+        template_type enum ('ABSTRACT','CONFERENCE_PAPER','CUSTOM','DISSERTATION','JOURNAL_ARTICLE','PROPOSAL','RESEARCH_PAPER','THESIS') not null,
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists citations 
+       add constraint FKslgq32ahkehhfi7v94k1g0fcs 
+       foreign key (document_id) 
+       references documents
+Hibernate: 
+    alter table if exists documents 
+       add constraint FKn3yorpjknmi88ikdmdrrkrp0g 
+       foreign key (project_id) 
+       references projects
+Hibernate: 
+    alter table if exists templates 
+       add constraint FK1okjilgwamk3y3m9bh87w6wjm 
+       foreign key (document_id) 
+       references documents
+2025-08-05T09:04:12.896+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T09:04:13.307+06:00  WARN 34260 --- [ongoing_research_service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T09:04:13.386+06:00 DEBUG 34260 --- [ongoing_research_service] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2025-08-05T09:04:13.454+06:00 DEBUG 34260 --- [ongoing_research_service] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-08-05T09:04:13.475+06:00 DEBUG 34260 --- [ongoing_research_service] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-08-05T09:04:13.513+06:00 DEBUG 34260 --- [ongoing_research_service] [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-08-05T09:04:13.664+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-08-05T09:04:13.699+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-05T09:04:13.707+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-05T09:04:13.781+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-08-05T09:04:13.792+06:00  INFO 34260 --- [ongoing_research_service] [  restartedMain] .s.s.o.OngoingResearchServiceApplication : Started OngoingResearchServiceApplication in 4.84 seconds (process running for 5.208)
+2025-08-05T09:06:02.668+06:00  INFO 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05T09:06:02.668+06:00  INFO 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-05T09:06:02.668+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-08-05T09:06:02.668+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-08-05T09:06:02.668+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-08-05T09:06:02.670+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4181a0fe
+2025-08-05T09:06:02.670+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@38e8ef22
+2025-08-05T09:06:02.670+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-08-05T09:06:02.670+06:00  INFO 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-08-05T09:06:02.690+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : OPTIONS "/api/projects/user/550e8400-e29b-41d4-a716-446655440000", parameters={}
+2025-08-05T09:06:02.697+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.ProjectController#getProjectsByUserId(UUID)
+2025-08-05T09:06:02.715+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-08-05T09:06:02.727+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/projects/user/550e8400-e29b-41d4-a716-446655440000", parameters={}
+2025-08-05T09:06:02.729+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.ProjectController#getProjectsByUserId(UUID)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.description,
+        p1_0.research_domain,
+        p1_0.status,
+        p1_0.title,
+        p1_0.updated_at,
+        p1_0.user_id 
+    from
+        projects p1_0 
+    where
+        p1_0.user_id=? 
+    order by
+        p1_0.updated_at desc
+2025-08-05T09:06:02.992+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-08-05T09:06:02.994+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(timestamp=2025-08-05T09:06:02.954802700, status=200, message=Projects retrieved successf (truncated)...]
+2025-08-05T09:06:03.010+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-08-05T09:06:03.014+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/projects", parameters={}
+2025-08-05T09:06:03.014+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.ProjectController#createProject(CreateProjectRequestDTO)
+2025-08-05T09:06:03.056+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreateProjectRequestDTO(userId=550e8400-e29b-41d4-a716-446655440000, title=My First Research Project (truncated)...]
+Hibernate: 
+    insert 
+    into
+        projects
+        (created_at, description, research_domain, status, title, updated_at, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-08-05T09:06:03.149+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-08-05T09:06:03.151+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(timestamp=2025-08-05T09:06:03.148806700, status=201, message=Project created successfull (truncated)...]
+2025-08-05T09:06:03.155+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-08-05T09:06:03.333+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : OPTIONS "/api/documents/project/b9300b61-ff1f-414a-afb8-32b3ab447cec", parameters={}
+2025-08-05T09:06:03.334+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.DocumentController#getDocumentsByProjectId(UUID)
+2025-08-05T09:06:03.335+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-08-05T09:06:03.340+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/documents/project/b9300b61-ff1f-414a-afb8-32b3ab447cec", parameters={}
+2025-08-05T09:06:03.341+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.DocumentController#getDocumentsByProjectId(UUID)
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.content,
+        d1_0.created_at,
+        d1_0.document_type,
+        d1_0.file_path,
+        d1_0.project_id,
+        d1_0.title,
+        d1_0.updated_at 
+    from
+        documents d1_0 
+    left join
+        projects p1_0 
+            on p1_0.id=d1_0.project_id 
+    where
+        p1_0.id=? 
+    order by
+        d1_0.updated_at desc
+2025-08-05T09:06:03.359+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-08-05T09:06:03.359+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(timestamp=2025-08-05T09:06:03.358802100, status=200, message=Documents retrieved success (truncated)...]
+2025-08-05T09:06:03.360+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-08-05T09:06:03.365+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/documents", parameters={}
+2025-08-05T09:06:03.366+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.DocumentController#createDocument(CreateDocumentRequestDTO)
+2025-08-05T09:06:03.371+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreateDocumentRequestDTO(projectId=b9300b61-ff1f-414a-afb8-32b3ab447cec, title=main.tex, content=\do (truncated)...]
+Hibernate: 
+    insert 
+    into
+        documents
+        (content, created_at, document_type, file_path, project_id, title, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-08-05T09:06:03.378+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-08-05T09:06:03.379+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(timestamp=2025-08-05T09:06:03.378802400, status=201, message=Document created successful (truncated)...]
+2025-08-05T09:06:03.382+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-08-05T09:06:06.767+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : OPTIONS "/api/documents/compile", parameters={}
+2025-08-05T09:06:06.768+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.DocumentController#compileLatex(CompileLatexRequestDTO)
+2025-08-05T09:06:06.768+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-08-05T09:06:06.771+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/documents/compile", parameters={}
+2025-08-05T09:06:06.771+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.DocumentController#compileLatex(CompileLatexRequestDTO)
+2025-08-05T09:06:06.774+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CompileLatexRequestDTO(latexContent=\documentclass{article}<EOL>\usepackage[utf8]{inputenc}<EOL>\usepackage{ (truncated)...]
+2025-08-05T09:06:06.778+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-08-05T09:06:06.778+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(timestamp=2025-08-05T09:06:06.777191200, status=200, message=LaTeX compiled successfully (truncated)...]
+2025-08-05T09:06:06.779+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-08-05T09:06:18.003+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/documents/compile", parameters={}
+2025-08-05T09:06:18.004+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.DocumentController#compileLatex(CompileLatexRequestDTO)
+2025-08-05T09:06:18.006+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CompileLatexRequestDTO(latexContent=\documentclass[11pt]{article}<EOL>\usepackage[margin=1in]{geometry}<EOL> (truncated)...]
+2025-08-05T09:06:18.021+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-08-05T09:06:18.021+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(timestamp=2025-08-05T09:06:18.019950100, status=200, message=LaTeX compiled successfully (truncated)...]
+2025-08-05T09:06:18.023+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-08-05T09:07:18.822+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : OPTIONS "/api/documents", parameters={}
+2025-08-05T09:07:18.822+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.DocumentController#updateDocument(UpdateDocumentRequestDTO)
+2025-08-05T09:07:18.823+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-08-05T09:07:18.826+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : PUT "/api/documents", parameters={}
+2025-08-05T09:07:18.826+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.DocumentController#updateDocument(UpdateDocumentRequestDTO)
+2025-08-05T09:07:18.830+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UpdateDocumentRequestDTO(documentId=290e70e8-41fd-4234-b302-16e3439c5ee4, content=\documentclass[11p (truncated)...]
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.content,
+        d1_0.created_at,
+        d1_0.document_type,
+        d1_0.file_path,
+        d1_0.project_id,
+        d1_0.title,
+        d1_0.updated_at 
+    from
+        documents d1_0 
+    where
+        d1_0.id=?
+Hibernate: 
+    update
+        documents 
+    set
+        content=?,
+        created_at=?,
+        document_type=?,
+        file_path=?,
+        project_id=?,
+        title=?,
+        updated_at=? 
+    where
+        id=?
+2025-08-05T09:07:18.865+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-08-05T09:07:18.865+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(timestamp=2025-08-05T09:07:18.864830800, status=200, message=Document updated successful (truncated)...]
+2025-08-05T09:07:18.867+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-08-05T09:07:20.882+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/api/documents", parameters={}
+2025-08-05T09:07:20.883+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.solace.scholar_ai.ongoing_research_service.controller.DocumentController#updateDocument(UpdateDocumentRequestDTO)
+2025-08-05T09:07:20.885+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UpdateDocumentRequestDTO(documentId=290e70e8-41fd-4234-b302-16e3439c5ee4, content=\documentclass[11p (truncated)...]
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.content,
+        d1_0.created_at,
+        d1_0.document_type,
+        d1_0.file_path,
+        d1_0.project_id,
+        d1_0.title,
+        d1_0.updated_at 
+    from
+        documents d1_0 
+    where
+        d1_0.id=?
+2025-08-05T09:07:20.888+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-08-05T09:07:20.889+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(timestamp=2025-08-05T09:07:20.888156700, status=200, message=Document updated successful (truncated)...]
+2025-08-05T09:07:20.891+06:00 DEBUG 34260 --- [ongoing_research_service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

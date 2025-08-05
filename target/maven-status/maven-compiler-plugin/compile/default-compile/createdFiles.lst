@@ -1,0 +1,4 @@
+org\solace\scholar_ai\ongoing_research_service\mapper\DocumentMapperImpl.class
+org\solace\scholar_ai\ongoing_research_service\mapper\ProjectMapperImpl.class
+org\solace\scholar_ai\ongoing_research_service\mapper\CitationMapperImpl.class
+org\solace\scholar_ai\ongoing_research_service\mapper\TemplateMapperImpl.class
