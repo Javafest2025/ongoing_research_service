@@ -16,7 +16,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class LaTeXCompilationService {
 
-    private static final String PANDOC_PATH = System.getProperty("pandoc.path", "pandoc");
+    private static final String PANDOC_PATH =
+            System.getProperty("pandoc.path", "C:\\Users\\alami\\AppData\\Local\\Pandoc\\pandoc.exe");
 
     /**
      * Compile LaTeX to HTML using pandoc
@@ -33,33 +34,43 @@ public class LaTeXCompilationService {
             Path texFile = workDir.resolve("document.tex");
             Files.write(texFile, latexContent.getBytes());
 
-            // Compile using pandoc
-            ProcessBuilder pb = new ProcessBuilder(
-                    PANDOC_PATH,
-                    texFile.toString(),
-                    "-f",
-                    "latex",
-                    "-t",
-                    "html",
-                    "--standalone",
-                    "--mathjax",
-                    "--css",
-                    "https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css");
-            pb.directory(workDir.toFile());
-            pb.redirectErrorStream(true);
+            // Try pandoc first
+            try {
+                ProcessBuilder pb = new ProcessBuilder(
+                        PANDOC_PATH,
+                        texFile.toString(),
+                        "-f",
+                        "latex",
+                        "-t",
+                        "html",
+                        "--standalone",
+                        "--mathjax",
+                        "--css",
+                        "https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css");
+                pb.directory(workDir.toFile());
+                pb.redirectErrorStream(true);
 
-            Process process = pb.start();
-            String output = readProcessOutput(process);
-            int exitCode = process.waitFor();
+                Process process = pb.start();
+                String output = readProcessOutput(process);
+                int exitCode = process.waitFor();
 
-            // Clean up
-            cleanupDirectory(workDir);
-
-            if (exitCode == 0) {
-                return enhanceHtmlOutput(output);
-            } else {
-                return createErrorHtml("LaTeX compilation failed: " + output);
+                if (exitCode == 0) {
+                    // Read the generated HTML file
+                    Path htmlFile = workDir.resolve("document.html");
+                    if (Files.exists(htmlFile)) {
+                        String html = Files.readString(htmlFile, StandardCharsets.UTF_8);
+                        cleanupDirectory(workDir);
+                        return enhanceHtmlOutput(html);
+                    }
+                }
+            } catch (Exception pandocError) {
+                // Pandoc failed, will fall back to manual conversion
+                System.out.println("Pandoc compilation failed, using fallback: " + pandocError.getMessage());
             }
+
+            // Clean up and fall back to manual conversion
+            cleanupDirectory(workDir);
+            return compileLatexFallback(latexContent);
 
         } catch (Exception e) {
             return createErrorHtml("Compilation error: " + e.getMessage());
