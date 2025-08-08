@@ -214,9 +214,39 @@ public class LaTeXCompilationService {
             html = html.replaceAll("\\\\\\\\", "<br>");
             html = html.replaceAll("\\n\\s*\\n", "</p><p>");
 
-            // Handle specific LaTeX commands that might cause issues
-            html = html.replaceAll("\\\\[a-zA-Z]+\\{[^}]*\\}", "");
-            html = html.replaceAll("\\\\[a-zA-Z]+", "");
+            // Handle tables
+            html = html.replaceAll(
+                    "\\\\begin\\{table\\}\\[.*?\\](.*?)\\\\end\\{table\\}",
+                    "<div style='margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 5px;'><strong>Table:</strong><br>$1</div>");
+            html = html.replaceAll(
+                    "\\\\begin\\{tabular\\}\\{.*?\\}(.*?)\\\\end\\{tabular\\}",
+                    "<table style='border-collapse: collapse; width: 100%; margin: 10px 0;'>$1</table>");
+            html = html.replaceAll(
+                    "\\\\hline", "<tr><td colspan='100%' style='border-top: 1px solid #ddd;'></td></tr>");
+            html = html.replaceAll("&", "</td><td style='border: 1px solid #ddd; padding: 8px;'>");
+            html = html.replaceAll("\\\\\\\\", "</td></tr><tr><td style='border: 1px solid #ddd; padding: 8px;'>");
+
+            // Handle TikZ and other graphics
+            html = html.replaceAll(
+                    "\\\\tikz.*?;",
+                    "<div style='margin: 20px 0; padding: 15px; background: #e8f4fd; border-radius: 5px; text-align: center;'><strong>Graphics:</strong><br>[TikZ Diagram]</div>");
+
+            // Handle figures
+            html = html.replaceAll(
+                    "\\\\begin\\{figure\\}\\[.*?\\](.*?)\\\\end\\{figure\\}",
+                    "<div style='margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 5px;'><strong>Figure:</strong><br>$1</div>");
+
+            // Handle captions
+            html = html.replaceAll(
+                    "\\\\caption\\{([^}]*)\\}",
+                    "<div style='text-align: center; font-style: italic; margin: 10px 0;'>$1</div>");
+            html = html.replaceAll("\\\\label\\{[^}]*\\}", "");
+
+            // Handle centering
+            html = html.replaceAll("\\\\centering", "<div style='text-align: center;'>");
+
+            // Handle specific LaTeX commands that might cause issues (but be more careful)
+            html = html.replaceAll("\\\\date\\{[^}]*\\}", "");
             html = html.replaceAll("%[^\\n]*", "");
 
             // Clean up extra whitespace

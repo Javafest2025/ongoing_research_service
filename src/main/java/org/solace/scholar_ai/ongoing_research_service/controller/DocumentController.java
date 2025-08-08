@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/documents")
 @RequiredArgsConstructor
 @Validated
-@CrossOrigin(origins = "*")
 public class DocumentController {
 
     private final DocumentService documentService;

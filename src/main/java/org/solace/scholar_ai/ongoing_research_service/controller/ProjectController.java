@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/projects")
 @RequiredArgsConstructor
 @Validated
-@CrossOrigin(origins = "*")
 public class ProjectController {
 
     private final ProjectService projectService;

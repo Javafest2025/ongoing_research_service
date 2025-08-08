@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/ai-assistance")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
 public class AIAssistanceController {
 
     private final AIAssistanceService aiAssistanceService;
@@ -140,6 +139,34 @@ public class AIAssistanceController {
                 .status(200)
                 .message("AI corrections generated")
                 .data(corrections)
+                .build());
+    }
+
+    /**
+     * Process chat-based AI requests for LaTeX editing
+     */
+    @PostMapping("/chat")
+    public ResponseEntity<APIResponse<String>> processChatRequest(@RequestBody Map<String, String> request) {
+
+        String selectedText = request.get("selectedText");
+        String userRequest = request.get("userRequest");
+        String fullDocument = request.get("fullDocument");
+
+        if (userRequest == null || userRequest.trim().isEmpty()) {
+            return ResponseEntity.badRequest()
+                    .body(APIResponse.<String>builder()
+                            .status(400)
+                            .message("User request is required")
+                            .build());
+        }
+
+        String aiResponse = aiAssistanceService.processChatRequest(
+                selectedText != null ? selectedText : "", userRequest, fullDocument != null ? fullDocument : "");
+
+        return ResponseEntity.ok(APIResponse.<String>builder()
+                .status(200)
+                .message("AI response generated")
+                .data(aiResponse)
                 .build());
     }
 }
