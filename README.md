@@ -1,3 +1,7 @@
+## 🚨 Helper repo
+
+⚠️ This repo is not part of the main project.
+
 # ScholarAI Ongoing Research Service
 
 A Spring Boot microservice for managing ongoing research projects with LaTeX document editing, AI assistance, and PDF generation capabilities.
